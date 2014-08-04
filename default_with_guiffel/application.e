@@ -10,7 +10,7 @@ class
 inherit
 	EV_APPLICATION
 
-	B_OBJECT
+	MY_OBJECT
 		undefine
 			default_create,
 			copy
