@@ -96,7 +96,7 @@ feature {NONE} -- Implementation
 	on_combo_change
 			-- When the combo is changed
 		do
-			alert ("This is the action when you select blablbalbjaksdbjsajfpioasjfiosjafiosajfiosajeiofjsaeiofjaseiofpjasiepofjaseiofjaseipfjseaio" + my_combo_list.selected_item.text)
+			alert ("This is the action when you select " + my_combo_list.selected_item.text)
 		end
 
 end
