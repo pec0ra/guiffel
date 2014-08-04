@@ -301,17 +301,21 @@ feature -- Main window edition
 			main_window.main_container.has (Result)
 		end
 
-	empty_cell: EV_CELL
-			-- Return an empty cell with minimum width of 20
+	empty_cell (a_height: INTEGER): EV_CELL
+			-- Return an empty cell with height of `a_height'
+		require
+			a_height >= 0
 		do
 			create Result
-			Result.set_minimum_height (20)
+			Result.set_minimum_height (a_height)
 		end
 
-	add_empty_cell (a_container: EV_BOX)
-			-- Add an empty cell with minimum width of 20
+	add_empty_cell (a_container: EV_BOX; a_height: INTEGER)
+			-- Add an empty cell with with height of `a_height'
+		require
+			a_height >= 0
 		do
-			add_widget (empty_cell, a_container)
+			add_widget (empty_cell(a_height), a_container)
 		end
 
 
