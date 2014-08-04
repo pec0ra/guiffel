@@ -18,6 +18,6 @@ feature -- Access
 	view: B_VIEW
 			-- The view
 		once
-			create Result.make
+			
 		end
 end

@@ -33,7 +33,7 @@ feature {NONE} -- Initialization
 
 			main_text_field := new_text ("Thank you for using Guiffel. %NThis text has been added from MY_VIEW and is accessible as main_text_field.", main_container)
 
-			add_empty_cell (main_container)
+			add_empty_cell (main_container, 20)
 
 			some_checkbox_list := new_checkbox_list (["One", "Two", "Three"], Void) -- If you don't want the widget to be automatically added pass Void as container
 
@@ -47,7 +47,7 @@ feature {NONE} -- Initialization
 				])
 			])
 
-			add_empty_cell (main_container)
+			add_empty_cell (main_container, 20)
 			my_combo_list := new_combo_list (["Element 1", "Element 2", "Element 3"], main_container)
 
 			my_combo_list.select_actions.extend (agent on_combo_change)

@@ -4,16 +4,12 @@ note
 	date: "$Date$"
 	revision: "$Revision$"
 
-class
+deferred class
 	B_VIEW
 
 inherit
 	B_CONSTANTS
-	B_OBJECT
 
-create
-	make,
-	make_with_menu_bar
 
 feature {NONE} -- Initialiazation
 	make
@@ -78,6 +74,19 @@ feature -- Main window edition
 			a_container.prune (a_widget)
 		ensure
 			not a_container.has (a_widget)
+		end
+
+	clean_window
+			-- Remove all the widgets from `main_container'
+		do
+
+			from
+				main_container.start
+			until
+				main_container.count = 0
+			loop
+				remove_widget (main_container.item, main_container)
+			end
 		end
 
 	new_text (a_text: STRING; a_container: detachable EV_BOX): EV_LABEL
