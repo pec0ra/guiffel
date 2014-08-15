@@ -305,9 +305,6 @@ feature -- Main window edition
 			if attached {EV_BOX} a_container as c then
 				add_widget (Result, c)
 			end
-
-		ensure
-			main_window.main_container.has (Result)
 		end
 
 	empty_cell (a_height: INTEGER): EV_CELL
